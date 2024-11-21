@@ -9,6 +9,10 @@ body {
   text-align: center;
 }
 
+.footer{
+  margin: 100px;
+}
+
 p {
   margin-bottom: 80px;
 }
@@ -27,7 +31,7 @@ p {
 }
 
 .juancho:hover {
-  background-color: #ecf01d;
+  background-color: #f4f81b;
 }
 
 .comment-box {
@@ -76,7 +80,7 @@ p {
   float: left;
   margin-right: 20px;
   background: url('sombra.png') no-repeat bottom right;
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -84,7 +88,7 @@ p {
 .maquinita {
   padding: 5px,800px,5px,800px;
   overflow: hidden;
-  border-right: 0.15em solid rgb(251, 251, 151);
+  border-right: 0.15em solid rgb(251, 251, 9);
   white-space: nowrap;
   animation: typing 3s steps(30, end) infinite;
   margin-top: inherit 70px;
@@ -124,14 +128,14 @@ header{
   .logo {
     width: 100px;
     height: 950px;
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
     border-radius: 100%;
     position: fixed;
     top: 60px;
     position: absolute;
-    top: 80px;
-    left: 50px;
+    top: 40px;
+    left: 40px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
     
 
@@ -154,16 +158,11 @@ header{
         }
       }
 
-#logo{
-  font-family: 'Pacifico', cursive;
-  font-size: 70px;
-  text-align: center;
-  margin: 30px;
-}
-#logo h1 {
-  font-family: 'Pacifico', cursive;
-  font-size: 70px;
-  text-align: center;
+      #logo{
+        font-family: 'Pacifico', cursive;
+        font-size: 70px;
+        text-align: center;
+        margin: 30px;
 }
 
 textarea {
@@ -173,3 +172,105 @@ textarea {
   padding: 10px;
   resize: vertical; /* Permite redimensionar verticalmente */
 } 
+
+
+.form-container {
+  background-color:   
+ #ffff99; 
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  width: 300px;
+  animation: bounce 2s infinite;
+
+}
+.registro{
+ font-size: 700px;
+}
+
+.sise{
+  color: rgb(39, 34, 54);
+  font-size: 70px;
+
+}
+.btn {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #f5a834;
+  color: #fff;
+  border: none;
+
+}
+
+.rere{
+  margin-top: 500px;
+  margin-left: 3px;
+  font-size: 50px;
+}
+
+.incluye{
+  margin: 100px;
+  margin-top: 300px;
+  margin-left: 600px;
+  font-size: 50px;
+}
+
+.user-name {
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(65, 63, 63);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  grid-gap: 20px;
+}
+
+.container{
+  display: flex;
+  height: 700px;
+  width: 1000px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  margin-top: 150px;
+}
+
+.info{
+  background-image: url();
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 150px 50px;
+  width: 50%;
+  background:linear-gradient(#f5a834,white, orange);
+}
+
+.txt-1{
+  color: rgb(0, 0, 0);
+  text-transform: capitalize;
+  font-size: 20px;
+  margin-bottom: 25px;
+}
+
+.info h2 {
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+  font-size: 50px;
+  margin-bottom: 25px;
+}
+
+.info hr{
+  width: 45px;
+  border: 4px solid rgb(0, 0, 0);
+  margin-left: 170px;
+  margin-bottom: 25px;
+  
+}
+
+.txt-2{
+  color:rgba(0, 0, 0, 0.7);
+  font-size: 18px;
+}
+.submit{
+  width: 90px;
+  color: rgb(0, 0, 0);
+}
