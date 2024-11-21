@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html> 
+<head>
+    <title>Inquietudes</title>
+	<link rel="stylesheet" type="text/css" href="estilo.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<header>    
+        <div id="logo" class="maquinita">
+           <img src="manos juntas.jpg" class="logo"> 
+           <h1 class="maquinita" id="logo">CreaTECNO</h1>
+        </div> 
+        
+        <nav id="menu"> 
+             <div class="nombreini"></div>
+			  <a href="index.html">
+             <span class="juancho" id="nombre" style="text-align: center;">Inicio </span> </a>
+             <a href="inicio_sesion.html"> 
+             <span class="juancho" id="nombre" style="text-align: center;"> iniciar sesion</span> 
+            </a>
+            
+             <a href="registro.html">
+             <span class="juancho" id="nombre" style="text-align: center;"> registrarse </span> </a>
+			 <a href="comentarios.html">
+             <span class="juancho" id="nombre" style="text-align: center;"> Comentanos </span> </a>
+        </nav>
+
+    </header>
+<body style="background:linear-gradient()">
+<h2>comparte tus inquietudes con nosotros</h2>
+<hr>
+    <textarea id="comentario" placeholder="Escribe tu comentario"></textarea>
+    <button onclick="guardarComentario()">Enviar</button>
+    <div id="comentarios"></div>
+
+    <script>
+        function guardarComentario() {
+            const comentario = document.getElementById('comentario').value;
+            const comentariosDiv = document.getElementById('comentarios');
+
+            // Obtener los comentarios existentes (si los hay)
+            let comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+
+            // Agregar el nuevo comentario a la lista
+            comentariosGuardados.push(comentario);
+
+            // Guardar la lista actualizada en el localStorage
+            localStorage.setItem('comentarios', JSON.stringify(comentariosGuardados));
+
+            // Mostrar el comentario en la página
+            const nuevoComentario = document.createElement('p');
+            nuevoComentario.textContent = comentario;
+            comentariosDiv.appendChild(nuevoComentario);
+
+            // Limpiar el campo de texto
+            document.getElementById('comentario').value = '';
+        }
+
+        // Cargar los comentarios al cargar la página
+        window.onload = function() {
+            const comentariosGuardados = JSON.parse(localStorage.getItem('comentarios')) || [];
+            const comentariosDiv = document.getElementById('comentarios');
+
+            comentariosGuardados.forEach(comentario => {
+                const nuevoComentario = document.createElement('p');
+                nuevoComentario.textContent = comentario;
+                comentariosDiv.appendChild(nuevoComentario);
+            });
+        };
+    </script>
+</body>
+</html>
