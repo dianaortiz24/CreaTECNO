@@ -29,3 +29,20 @@ registroForm.addEventListener('submit', (event) => {
     alert("registro exitoso")
     window.location.href="./index.html"
 }});
+
+loginForm.getElementById("loginForm").addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    const email = document.getElementById("loginEmail").value;
+    const pswd = document.getElementById("loginPassword").value;
+
+    const usuarioExiste = usuarios.find(
+        (user) => user.email === email&& user.pswd === pswd);
+
+    if (usuarioExiste){
+        alert('inicio de sesion correcto')
+        window.location.href="./index.html"
+    }else{
+        alert('usuario y/o contraseña invalido')
+    } 
+});
