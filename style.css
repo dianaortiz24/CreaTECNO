@@ -165,3 +165,11 @@ header{
   font-size: 70px;
   text-align: center;
 }
+
+textarea {
+  width: 80%; /* Ajusta el ancho según tus necesidades */
+  background-color: rgba(255, 100, 255, 0.8); /* Fondo blanco con 80% de transparencia */
+  border: 1px solid #ccc;
+  padding: 10px;
+  resize: vertical; /* Permite redimensionar verticalmente */
+} 
